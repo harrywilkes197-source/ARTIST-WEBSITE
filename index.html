@@ -1,111 +1,106 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="ARTIST — More than clothes. It's a mindset.">
-  <title>ARTIST — More Than Clothes</title>
+  <title>ARTIST</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <a class="logo" href="#">ARTIST</a>
-    <nav>
-      <a href="#shop">SHOP</a>
-      <a href="#story">STORY</a>
-      <a href="#contact">CONTACT</a>
-    </nav>
-    <button class="cart-button" id="cartButton">CART <span id="cartCount">0</span></button>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">ARTIST</p>
-        <h1>MORE THAN<br>CLOTHES.</h1>
-        <p>IT'S A MINDSET.</p>
-        <a class="hero-link" href="#shop">EXPLORE COLLECTION <span>↓</span></a>
+  <div class="site-shell">
+    <header class="topbar">
+      <button class="icon-btn" id="closeTop" aria-label="Close">×</button>
+      <strong>ARTIST</strong>
+      <div class="top-actions">
+        <button class="icon-btn" aria-label="Search">⌕</button>
+        <button class="icon-btn" aria-label="Share">↗</button>
       </div>
-    </section>
+    </header>
 
-    <section class="intro">
-      <p class="eyebrow">THE COLLECTION</p>
-      <h2>BUILT FOR THE<br>ONES WHO CREATE.</h2>
-    </section>
+    <main>
+      <section class="controls">
+        <div class="nav-row">
+          <div class="brand-mark">A R T I S T</div>
+          <nav class="category-tabs" aria-label="Product categories">
+            <button data-category="hoodie">HOODIE</button>
+            <button data-category="jacket">JACKET</button>
+            <button data-category="joggers">JOGGERS</button>
+            <button data-category="set">SET</button>
+          </nav>
+        </div>
+        <div class="nav-row lower">
+          <button class="cart-pill" id="cartButton">CART (<span id="cartCount">0</span>)</button>
+          <div class="colour-toggle">
+            <button class="active" data-colour="black">BLACK</button>
+            <button data-colour="white">WHITE</button>
+          </div>
+        </div>
+      </section>
 
-    <section class="shop" id="shop">
-      <div class="section-head">
-        <h2>SHOP</h2>
-        <p>06 PRODUCTS</p>
-      </div>
+      <section id="productView" class="product-view"></section>
 
-      <div class="products">
-        <article class="product" data-name="ARTIST White Joggers" data-price="55">
-          <div class="product-image"><img src="white-joggers.jpeg" alt="ARTIST white joggers"></div>
-          <div class="product-info"><div><h3>WHITE JOGGERS</h3><p>ARTIST CORE</p></div><strong>£55</strong></div>
-          <button class="add">ADD TO CART</button>
+      <section class="info-section" id="details">
+        <div class="info-block">
+          <h2>PREMIUM PACKAGING</h2>
+          <p>The experience matters. Every order ships in branded packaging with a hang tag and a thank-you card.</p>
+        </div>
+        <div class="accordion">
+          <button class="accordion-head">SIZE GUIDE <span>+</span></button>
+          <div class="accordion-body"><p>Sizes S to XXL. Check the product fit notes before ordering.</p></div>
+          <button class="accordion-head">FIT <span>+</span></button>
+          <div class="accordion-body"><p>Clean silhouettes with a relaxed streetwear fit.</p></div>
+          <button class="accordion-head">FABRIC AND CARE <span>+</span></button>
+          <div class="accordion-body"><p>Follow the garment label for washing and drying instructions.</p></div>
+        </div>
+        <div class="info-block shipping">
+          <h2>SHIPPING AND RETURNS</h2>
+          <div class="accordion">
+            <button class="accordion-head">SHIPPING <span>+</span></button>
+            <div class="accordion-body"><p>Orders are prepared within 1–2 business days. Delivery times vary by destination.</p></div>
+            <button class="accordion-head">RETURNS <span>+</span></button>
+            <div class="accordion-body"><p>Unused items may be returned in accordance with the store's return policy.</p></div>
+            <button class="accordion-head">PACKAGING <span>+</span></button>
+            <div class="accordion-body"><p>Every order is packed to preserve the garment and the ARTIST experience.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature-grid" id="features">
+        <article class="feature-card">
+          <img id="featureOne" src="black-windbreaker.jpeg" alt="">
+          <div><strong>SLEEVE STRIPES</strong><span>Bold, curved signature</span></div>
         </article>
-
-        <article class="product" data-name="ARTIST Black Windbreaker" data-price="85">
-          <div class="product-image"><img src="black-windbreaker.jpeg" alt="ARTIST black windbreaker"></div>
-          <div class="product-info"><div><h3>BLACK WINDBREAKER</h3><p>ARTIST OUTERWEAR</p></div><strong>£85</strong></div>
-          <button class="add">ADD TO CART</button>
+        <article class="feature-card">
+          <img id="featureTwo" src="black-windbreaker.jpeg" alt="">
+          <div><strong>ADJUSTABLE HOOD</strong><span>Drawcord toggles</span></div>
         </article>
-
-        <article class="product" data-name="ARTIST Black Hoodie" data-price="65">
-          <div class="product-image"><img src="black-hoodie.jpeg" alt="ARTIST black hoodie"></div>
-          <div class="product-info"><div><h3>BLACK HOODIE</h3><p>ARTIST CORE</p></div><strong>£65</strong></div>
-          <button class="add">ADD TO CART</button>
+        <article class="feature-card tall">
+          <img id="featureThree" src="black-windbreaker.jpeg" alt="">
+          <div><strong>ZIP DETAIL</strong><span>Built for movement</span></div>
         </article>
-
-        <article class="product" data-name="ARTIST White Windbreaker" data-price="85">
-          <div class="product-image"><img src="white-windbreaker.jpeg" alt="ARTIST white windbreaker"></div>
-          <div class="product-info"><div><h3>WHITE WINDBREAKER</h3><p>ARTIST OUTERWEAR</p></div><strong>£85</strong></div>
-          <button class="add">ADD TO CART</button>
+        <article class="feature-card tall">
+          <img id="featureFour" src="black-windbreaker.jpeg" alt="">
+          <div><strong>ELASTIC CUFFS</strong><span>Clean finish</span></div>
         </article>
+      </section>
 
-        <article class="product" data-name="ARTIST White Hoodie" data-price="65">
-          <div class="product-image"><img src="white-hoodie.jpeg" alt="ARTIST white hoodie"></div>
-          <div class="product-info"><div><h3>WHITE HOODIE</h3><p>ARTIST CORE</p></div><strong>£65</strong></div>
-          <button class="add">ADD TO CART</button>
-        </article>
-
-        <article class="product" data-name="ARTIST Black Joggers" data-price="55">
-          <div class="product-image"><img src="black-joggers.jpeg" alt="ARTIST black joggers"></div>
-          <div class="product-info"><div><h3>BLACK JOGGERS</h3><p>ARTIST CORE</p></div><strong>£55</strong></div>
-          <button class="add">ADD TO CART</button>
-        </article>
-      </div>
-    </section>
-
-    <section class="statement" id="story">
-      <div>
-        <p class="eyebrow">ARTIST</p>
+      <section class="mindset">
+        <div class="mindset-images">
+          <img src="white-joggers.jpeg" alt="White ARTIST joggers">
+          <img src="black-hoodie.jpeg" alt="Black ARTIST hoodie">
+        </div>
+        <p>THE MINDSET</p>
         <h2>MORE THAN CLOTHES.<br>IT'S A MINDSET.</h2>
-      </div>
-      <p class="statement-text">Clean silhouettes. Strong details. A collection made to feel timeless while keeping its own identity.</p>
-    </section>
+      </section>
+    </main>
 
-    <section class="details">
-      <div><span>01</span><h3>PREMIUM DETAILS</h3><p>Designed around the small details that make a piece feel considered.</p></div>
-      <div><span>02</span><h3>CLEAN & TIMELESS</h3><p>A simple monochrome direction built to work across the collection.</p></div>
-      <div><span>03</span><h3>THE ARTIST MINDSET</h3><p>More than clothes — a visual identity and a way of thinking.</p></div>
-    </section>
-  </main>
-
-  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
-    <div class="cart-top"><h2>YOUR CART</h2><button id="closeCart">×</button></div>
-    <div id="cartItems" class="cart-items"><p class="empty">Your cart is empty.</p></div>
-    <div class="cart-bottom"><div><span>TOTAL</span><strong id="cartTotal">£0</strong></div><button class="checkout" id="checkout">CHECKOUT</button></div>
-  </aside>
-  <div class="overlay" id="overlay"></div>
-
-  <footer id="contact">
-    <div class="footer-logo">ARTIST</div>
-    <p>MORE THAN CLOTHES. IT'S A MINDSET.</p>
-    <p>© 2026 ARTIST</p>
-  </footer>
-
+    <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+      <div class="cart-head"><strong>YOUR CART</strong><button id="closeCart">×</button></div>
+      <div id="cartItems" class="cart-items"><p>Your cart is empty.</p></div>
+      <div class="cart-foot"><span>TOTAL</span><strong id="cartTotal">$0</strong><button id="checkout">CHECKOUT</button></div>
+    </aside>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
